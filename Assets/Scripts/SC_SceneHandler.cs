@@ -9,7 +9,7 @@ namespace SceneChunking
     public class SC_SceneHandler : MonoBehaviour
     {
         [SerializeField]
-        private SC_SceneSetting _chunkInfos = default;
+        private SC_SceneSetting _settings = default;
 
         private List<SC_ChunkRequest> _activeChunkRequests = new List<SC_ChunkRequest>();
 
@@ -46,7 +46,7 @@ namespace SceneChunking
             if (_requestedChunks.Contains(id))
                 return;
 
-            string chunkName = _chunkInfos.BaseChunkName + id.x + "_" + id.y;
+            string chunkName = _settings.BaseChunkName + id.x + "_" + id.y;
             var sceneLoadOperation = SceneManager.LoadSceneAsync(chunkName, LoadSceneMode.Additive);
 
             if (sceneLoadOperation != null)
@@ -61,7 +61,7 @@ namespace SceneChunking
             if (_requestedChunks.Contains(id))
                 return;
 
-            string chunkName = _chunkInfos.BaseChunkName + id.x + "_" + id.y;
+            string chunkName = _settings.BaseChunkName + id.x + "_" + id.y;
             var sceneLoadOperation = SceneManager.UnloadSceneAsync(chunkName, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
 
             if (sceneLoadOperation != null)
@@ -90,7 +90,7 @@ namespace SceneChunking
 
         private void LoadAllChunks()
         {
-            var chunks = _chunkInfos.GetChunks();
+            var chunks = _settings.GetChunks();
 
             foreach (var chunk in chunks)
                 TryLoadChunkAt(chunk.ChunkId);
@@ -98,7 +98,7 @@ namespace SceneChunking
 
         private void UnloadAllChunks()
         {
-            var chunks = _chunkInfos.GetChunks();
+            var chunks = _settings.GetChunks();
 
             foreach (var chunk in chunks)
                 TryUnloadChunkAt(chunk.ChunkId);

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8408b709d59f06a47afac8ed0953e9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chunkInfos: {fileID: 11400000, guid: f5381349f2b13104097b721988f2679e, type: 2}
+  _settings: {fileID: 11400000, guid: f5381349f2b13104097b721988f2679e, type: 2}
 --- !u!4 &1641771713
 Transform:
   m_ObjectHideFlags: 0

@@ -5,32 +5,29 @@ using UnityEngine;
 
 namespace SceneChunking.Editor
 {
-    [CustomEditor(typeof(SC_ChunkRoot))]
+    [CustomEditor(typeof(SC_ChunkRoot)), CanEditMultipleObjects()]
     public class SC_ChunkRootEditor : UnityEditor.Editor
-    {
-        //TODO: find nodes automatically:
-
-        //TODO: deactivate all nodes:
-
-        //TODO: activate all nodes:
-
+    {   
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
 
             if(GUILayout.Button("Find nodes"))
             {
-                (target as SC_ChunkRoot).FindAllNodes();
+                for (int i = 0; i < targets.Length; i++)
+                    (targets[i] as SC_ChunkRoot).FindAllNodes();
             }
 
             if (GUILayout.Button("Activate nodes"))
             {
-                (target as SC_ChunkRoot).ActivateAllNodes();
+                for (int i = 0; i < targets.Length; i++)
+                    (targets[i] as SC_ChunkRoot).ActivateAllNodes();
             }
 
             if (GUILayout.Button("Deactivate nodes"))
             {
-                (target as SC_ChunkRoot).DeactivateAllNodes();
+                for (int i = 0; i < targets.Length; i++)
+                    (targets[i] as SC_ChunkRoot).DeactivateAllNodes();
             }
         }
     }

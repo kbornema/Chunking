@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90d5934a1c2d53b41b9087d173defe19, type: 3}
-  m_Name: ChunkingSettings_SceneA
+  m_Name: ChunkSettings_SceneA
   m_EditorClassIdentifier: 
   _baseChunkName: Scene_A_
   _chunks:
-  - SceneChunkName: 
+  - SceneChunkName: Scene_A_-1_0
     ChunkId: {x: -1, y: 0}
-  - SceneChunkName: 
+  - SceneChunkName: Scene_A_0_-1
     ChunkId: {x: 0, y: -1}
-  - SceneChunkName: 
+  - SceneChunkName: Scene_A_0_0
     ChunkId: {x: 0, y: 0}
-  - SceneChunkName: 
+  - SceneChunkName: Scene_A_0_1
     ChunkId: {x: 0, y: 1}
-  - SceneChunkName: 
+  - SceneChunkName: Scene_A_1_0
     ChunkId: {x: 1, y: 0}
   _chunkScenes:
   - {fileID: 102900000, guid: d5c1dde253ab9f0428a7fe88bf5054e8, type: 3}
