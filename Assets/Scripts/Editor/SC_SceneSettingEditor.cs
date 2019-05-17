@@ -13,9 +13,7 @@ namespace SceneChunking.Editor
             base.OnInspectorGUI();
 
             if (GUILayout.Button("Scenes to chunks"))
-            {
-                (target as SC_SceneSetting).ScenesToChunks();
-            }
+                (target as SC_SceneSetting).ScenesToChunks_Editor();
         }
     }
 }

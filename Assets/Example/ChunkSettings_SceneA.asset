@@ -13,20 +13,24 @@ MonoBehaviour:
   m_Name: ChunkSettings_SceneA
   m_EditorClassIdentifier: 
   _baseChunkName: Scene_A_
-  _chunks:
-  - SceneChunkName: Scene_A_-1_0
-    ChunkId: {x: -1, y: 0}
-  - SceneChunkName: Scene_A_0_-1
-    ChunkId: {x: 0, y: -1}
-  - SceneChunkName: Scene_A_0_0
-    ChunkId: {x: 0, y: 0}
-  - SceneChunkName: Scene_A_0_1
-    ChunkId: {x: 0, y: 1}
-  - SceneChunkName: Scene_A_1_0
-    ChunkId: {x: 1, y: 0}
-  _chunkScenes:
-  - {fileID: 102900000, guid: d5c1dde253ab9f0428a7fe88bf5054e8, type: 3}
-  - {fileID: 102900000, guid: 428882570b2ab83469b259935385ab3f, type: 3}
-  - {fileID: 102900000, guid: ac49fa675de7622459f9b6c6b81b202e, type: 3}
-  - {fileID: 102900000, guid: 3104661fe4a59f949ab2c124b1aa03c4, type: 3}
-  - {fileID: 102900000, guid: 3a6da22211a655047bda1e248765b061, type: 3}
+  _chunkMetaInfos:
+  - _sceneChunkName: Scene_A_-1_0
+    _chunkId: {x: -1, y: 0}
+    _sceneAsset_Editor: {fileID: 102900000, guid: d5c1dde253ab9f0428a7fe88bf5054e8,
+      type: 3}
+  - _sceneChunkName: Scene_A_0_-1
+    _chunkId: {x: 0, y: -1}
+    _sceneAsset_Editor: {fileID: 102900000, guid: 428882570b2ab83469b259935385ab3f,
+      type: 3}
+  - _sceneChunkName: Scene_A_0_0
+    _chunkId: {x: 0, y: 0}
+    _sceneAsset_Editor: {fileID: 102900000, guid: ac49fa675de7622459f9b6c6b81b202e,
+      type: 3}
+  - _sceneChunkName: Scene_A_0_1
+    _chunkId: {x: 0, y: 1}
+    _sceneAsset_Editor: {fileID: 102900000, guid: 3104661fe4a59f949ab2c124b1aa03c4,
+      type: 3}
+  - _sceneChunkName: Scene_A_1_0
+    _chunkId: {x: 1, y: 0}
+    _sceneAsset_Editor: {fileID: 102900000, guid: 3a6da22211a655047bda1e248765b061,
+      type: 3}

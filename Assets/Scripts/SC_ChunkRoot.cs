@@ -5,41 +5,33 @@ using UnityEngine;
 
 namespace SceneChunking
 {   
+    [ExecuteInEditMode]
     public class SC_ChunkRoot : MonoBehaviour
     {
-        public enum ChunkState
-        {
-            None,
-            Loading,
-            Unloading,
-            Ready
-        }
-
+        //TODO: maybe get rid of this list? and enable child objects individually?
         [SerializeField]
         private List<SC_ChunkNode> _chunkNodes = default;
-        [SerializeField]
-        private ChunkState _state = ChunkState.None;
 
-        public void FindAllNodes()
-        {
+//        private void Awake()
+//        {
+//            ActivateAllNodes();
+//        }
 
+//        public void ActivateAllNodes()
+//        {
+//            for (int i = 0; i < _chunkNodes.Count; i++)
+//                _chunkNodes[i].ActivateNode();
+//        }
 
-            //TODO: only save root nodes here, assign child nodes of nodes at that place
-            //_chunkNodes.Clear();
-        }
+//        public void DeactivateAllNodes()
+//        {
+//            for (int i = 0; i < _chunkNodes.Count; i++)
+//                _chunkNodes[i].DeactivateNode();
 
-        public void ActivateAllNodes()
-        {
-            _state = ChunkState.Loading;
-
-            for (int i = 0; i < _chunkNodes.Count; i++)
-                _chunkNodes[i].ActivateNode();
-        }
-
-        public void DeactivateAllNodes()
-        {
-            for (int i = 0; i < _chunkNodes.Count; i++)
-                _chunkNodes[i].DeactivateNode();
-        }
+//#if UNITY_EDITOR
+//            if(!Application.isPlaying)
+//                UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+//#endif
+//        }
     }
 }

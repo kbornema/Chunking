@@ -9,15 +9,16 @@ namespace SceneChunking
     {
         public enum Mode { Load, Unload }
 
-        public SC_ChunkInfo Info;
-        public AsyncOperation Operation;
-        public Mode RequestMode;
+        private SC_ChunkMetaInfo _metaInfo;
+        public SC_ChunkMetaInfo MetaInfo => _metaInfo;
 
-        public SC_ChunkRequest(SC_ChunkInfo info, Mode requestMode, AsyncOperation sceneLoadOperation)
+        private Mode _mode;
+        public Mode RequestMode => _mode;
+
+        public SC_ChunkRequest(SC_ChunkMetaInfo info, Mode requestMode)
         {
-            Info = info;
-            Operation = sceneLoadOperation;
-            RequestMode = requestMode;
+            _metaInfo = info;
+            _mode = requestMode;
         }
     }
 }
